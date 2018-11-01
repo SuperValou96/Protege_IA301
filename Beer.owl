@@ -13,6 +13,25 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasAlcoholDegreeValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasAlcoholDegreeValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -40,6 +59,21 @@
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AlcoholFreeDegree -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AlcoholFreeDegree">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasAlcoholDegreeValue"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree"/>
     </owl:Class>
     
@@ -53,9 +87,57 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Argentina -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Argentina">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Aruba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Aruba">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Australia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Australia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Austria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Austria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Belgium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Belgium">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Belize -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Belize">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
     
 
 
@@ -91,6 +173,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Brazil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Brazil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BrewersGold -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BrewersGold">
@@ -103,6 +193,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Brewery">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Origin"/>
+        <rdfs:comment>The brewery where the beer comes from.
+The subclasses aren&apos;t all disjoint because an AbbayeBrewery can be a TrappistBrewery.</rdfs:comment>
     </owl:Class>
     
 
@@ -111,6 +203,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BrownAle">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AleStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Canada -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Canada">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
     </owl:Class>
     
 
@@ -155,10 +255,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#China -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#China">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Chocolate -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Chocolate">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Colombia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Colombia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
     </owl:Class>
     
 
@@ -175,6 +291,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Origin"/>
+        <rdfs:comment>The country where the beer comes from</rdfs:comment>
     </owl:Class>
     
 
@@ -187,6 +304,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Croatia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Croatia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cuba -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cuba">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Czech_Republic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Czech_Republic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree">
@@ -195,11 +336,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Denmark -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Denmark">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#DoubleHop -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#DoubleHop">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TripleHop"/>
     </owl:Class>
     
 
@@ -228,6 +376,62 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Egypt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Egypt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#El_Salvador -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#El_Salvador">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#England -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#England">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Estonia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Estonia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Finland -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Finland">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#France -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#France">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#French_Polynesia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#French_Polynesia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#FruitIngredient -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#FruitIngredient">
@@ -240,6 +444,30 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Fuggles">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Germany -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Germany">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Greece -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Greece">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Guatemala -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Guatemala">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
     </owl:Class>
     
 
@@ -276,6 +504,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Honduras -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Honduras">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HopIngredient -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HopIngredient">
@@ -284,10 +520,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Hungary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Hungary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#ImperalStout -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#ImperalStout">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StoutStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#India -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#India">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
     </owl:Class>
     
 
@@ -310,7 +562,65 @@
 
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Ingredient -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Ingredient"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Ingredient">
+        <rdfs:comment>The beer ingredients. It&apos;s a complex class because a beer can have multiple ingredients of all kinds.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Ireland -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Ireland">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Israel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Israel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Italy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Italy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Jamaica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Jamaica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Japan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Japan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Kenya -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Kenya">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Korea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Korea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
     
 
 
@@ -330,6 +640,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Latvia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Latvia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LightDegree -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LightDegree">
@@ -338,10 +656,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Lithuania -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Lithuania">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LowCost -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LowCost">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Macao -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Macao">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Macedonia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Macedonia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
     </owl:Class>
     
 
@@ -370,6 +712,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Mauritius -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Mauritius">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumCost -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumCost">
@@ -382,6 +732,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumDegree">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Mexico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Mexico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
     </owl:Class>
     
 
@@ -410,6 +768,38 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Myanmar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Myanmar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Namibia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Namibia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Netherlands -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Netherlands">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#New_Zealand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#New_Zealand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#NorthernBrewer -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#NorthernBrewer">
@@ -418,9 +808,19 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Norway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Norway">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Origin -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Origin"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Origin">
+        <rdfs:comment>The beer origin</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -448,6 +848,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Panama -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Panama">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Philippines -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Philippines">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PilsnerStyle -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PilsnerStyle">
@@ -456,10 +872,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Poland -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Poland">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PorterStyle -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PorterStyle">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Style"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Portugal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Portugal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Russia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Russia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
     </owl:Class>
     
 
@@ -480,10 +920,34 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Sierra_Leone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Sierra_Leone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SingleHop -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SingleHop">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Slovakia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Slovakia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Spain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Spain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
     </owl:Class>
     
 
@@ -500,6 +964,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HopIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Sri_Lanka -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Sri_Lanka">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
     </owl:Class>
     
 
@@ -536,6 +1008,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Sweden -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Sweden">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SweetStout -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SweetStout">
@@ -548,6 +1028,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SweetTaste">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Taste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Switzerland -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Switzerland">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Taiwan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Taiwan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
     </owl:Class>
     
 
@@ -576,6 +1072,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Thailand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Thailand">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Togo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Togo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TrappistBrewery -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TrappistBrewery">
@@ -588,6 +1100,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TripleHop">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#United_Kingdom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#United_Kingdom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#United_States -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#United_States">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
     </owl:Class>
     
 
@@ -635,6 +1163,26 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Example-Beer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Example-Beer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
+        <hasAlcoholDegreeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.5</hasAlcoholDegreeValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // General axioms
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -668,6 +1216,72 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PilsnerStyle"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PorterStyle"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StoutStyle"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Argentina"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Aruba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Australia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Austria"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Belgium"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Belize"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Brazil"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Canada"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#China"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Colombia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Croatia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cuba"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Czech_Republic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Denmark"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Egypt"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#El_Salvador"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#England"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Estonia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Finland"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#France"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#French_Polynesia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Germany"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Greece"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Guatemala"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Honduras"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Hungary"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#India"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Ireland"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Israel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Italy"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Jamaica"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Japan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Kenya"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Korea"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Latvia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Lithuania"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Macao"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Macedonia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Mauritius"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Mexico"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Myanmar"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Namibia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Netherlands"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#New_Zealand"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Norway"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Panama"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Philippines"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Poland"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Portugal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Russia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Sierra_Leone"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Slovakia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Spain"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Sri_Lanka"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Sweden"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Switzerland"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Taiwan"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Thailand"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Togo"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#United_Kingdom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#United_States"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -718,6 +1332,14 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#CraftBrewery"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#IndustrialBrewery"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TrappistBrewery"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#DoubleHop"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SingleHop"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TripleHop"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
