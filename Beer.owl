@@ -13,6 +13,62 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasBrewery -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasBrewery">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasOrigin"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Brewery"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasOrigin"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasHopIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasHopIngredient">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasIngredient"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HopIngredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasIngredient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Ingredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasOrigin"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -24,6 +80,14 @@
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasAlcoholDegreeValue -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasAlcoholDegreeValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasCost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasCost">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:DatatypeProperty>
     
@@ -347,6 +411,13 @@ The subclasses aren&apos;t all disjoint because an AbbayeBrewery can be a Trappi
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#DoubleHop -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#DoubleHop">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasHopIngredient"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop"/>
     </owl:Class>
     
@@ -499,6 +570,21 @@ The subclasses aren&apos;t all disjoint because an AbbayeBrewery can be a Trappi
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HighCost -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HighCost">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasCost"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</xsd:minExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cost"/>
     </owl:Class>
     
@@ -651,6 +737,33 @@ The subclasses aren&apos;t all disjoint because an AbbayeBrewery can be a Trappi
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LightDegree -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LightDegree">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasAlcoholDegreeValue"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree"/>
     </owl:Class>
     
@@ -667,6 +780,21 @@ The subclasses aren&apos;t all disjoint because an AbbayeBrewery can be a Trappi
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LowCost -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LowCost">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasCost"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cost"/>
     </owl:Class>
     
@@ -723,6 +851,33 @@ The subclasses aren&apos;t all disjoint because an AbbayeBrewery can be a Trappi
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumCost -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumCost">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasCost"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cost"/>
     </owl:Class>
     
@@ -731,6 +886,33 @@ The subclasses aren&apos;t all disjoint because an AbbayeBrewery can be a Trappi
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumDegree -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumDegree">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasAlcoholDegreeValue"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:intersectionOf>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree"/>
     </owl:Class>
     
@@ -755,7 +937,7 @@ The subclasses aren&apos;t all disjoint because an AbbayeBrewery can be a Trappi
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HopIngredient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
     </owl:Class>
     
 
@@ -931,6 +1113,13 @@ The subclasses aren&apos;t all disjoint because an AbbayeBrewery can be a Trappi
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SingleHop -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SingleHop">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasHopIngredient"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop"/>
     </owl:Class>
     
@@ -987,6 +1176,21 @@ The subclasses aren&apos;t all disjoint because an AbbayeBrewery can be a Trappi
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StrongDegree -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StrongDegree">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasAlcoholDegreeValue"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</xsd:minExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree"/>
     </owl:Class>
     
@@ -1099,6 +1303,13 @@ The subclasses aren&apos;t all disjoint because an AbbayeBrewery can be a Trappi
     <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TripleHop -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TripleHop">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#hasHopIngredient"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop"/>
     </owl:Class>
     
@@ -1176,6 +1387,18 @@ The subclasses aren&apos;t all disjoint because an AbbayeBrewery can be a Trappi
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Example-Beer">
         <rdf:type rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
         <hasAlcoholDegreeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.5</hasAlcoholDegreeValue>
+        <hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</hasCost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Example2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Example2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BrewersGold"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Challenger"/>
+        <hasAlcoholDegreeValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</hasAlcoholDegreeValue>
+        <hasCost rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.5</hasCost>
     </owl:NamedIndividual>
     
 
