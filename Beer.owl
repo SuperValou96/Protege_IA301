@@ -1,0 +1,744 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#"
+     xml:base="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AbbayeBrewery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AbbayeBrewery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Brewery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AcidTaste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AcidTaste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Taste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AlcoholFreeDegree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AlcoholFreeDegree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AleStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AleStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Style"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BitterAle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BitterAle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AleStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BitterTaste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BitterTaste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Taste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Black -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Black">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BockStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BockStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Style"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BrewersGold -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BrewersGold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Brewery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Brewery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Origin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BrownAle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BrownAle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AleStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Caramel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Caramel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Carapils -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Carapils">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cascade -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cascade">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#CerealIngredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#CerealIngredient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Challenger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Challenger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Chocolate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Chocolate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Origin"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#CraftBrewery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#CraftBrewery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Brewery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#DoubleHop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#DoubleHop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TripleHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#DryHop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#DryHop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HopIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#DryStout -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#DryStout">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StoutStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#EastKentGoldings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#EastKentGoldings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#FruitIngredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#FruitIngredient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Fuggles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Fuggles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HallertauHersbrucker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HallertauHersbrucker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HallertauMittelfrüh -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HallertauMittelfrüh">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HallertauPerle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HallertauPerle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HighCost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HighCost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HopIngredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HopIngredient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#ImperalStout -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#ImperalStout">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StoutStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#IndiaPaleAle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#IndiaPaleAle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AleStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#IndustrialBrewery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#IndustrialBrewery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Brewery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Ingredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Ingredient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LaggerStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LaggerStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Style"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LambicStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LambicStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Style"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LightDegree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LightDegree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LowCost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LowCost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Magnum -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Magnum">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltCategory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltCategory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltIngredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltIngredient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Ingredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumCost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumCost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumDegree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumDegree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MildAle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MildAle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AleStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HopIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Munich -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Munich">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#NorthernBrewer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#NorthernBrewer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Origin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Origin"/>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#OtherAromaticStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#OtherAromaticStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Style"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Pale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Pale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MaltCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PaleAle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PaleAle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AleStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PilsnerStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PilsnerStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Style"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PorterStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PorterStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Style"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Saaz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Saaz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#ScotchAle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#ScotchAle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AleStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SingleHop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SingleHop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpaltSelect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpaltSelect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HopIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StoutStyle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StoutStyle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Style"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StrongDegree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StrongDegree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Degree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Style -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Style">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StyrianGoldings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StyrianGoldings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SweetStout -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SweetStout">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StoutStyle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SweetTaste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SweetTaste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Taste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Target -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Target">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Taste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Taste">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Beer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Tettnanger -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Tettnanger">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpeciesHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TrappistBrewery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TrappistBrewery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Brewery"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TripleHop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TripleHop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MultiHop"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#barley -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#barley">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#CerealIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#corn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#corn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#CerealIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#rice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#rice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#CerealIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#rye -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#rye">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#CerealIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#wheat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#wheat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#CerealIngredient"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AbbayeBrewery"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#CraftBrewery"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#IndustrialBrewery"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AlcoholFreeDegree"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LightDegree"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumDegree"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StrongDegree"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#AleStyle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BockStyle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LaggerStyle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LambicStyle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#OtherAromaticStyle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PilsnerStyle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PorterStyle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StoutStyle"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BitterAle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BrownAle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#IndiaPaleAle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MildAle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#PaleAle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#ScotchAle"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Black"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Caramel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Carapils"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Chocolate"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Munich"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Pale"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#BrewersGold"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Cascade"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Challenger"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#EastKentGoldings"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Fuggles"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HallertauHersbrucker"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HallertauMittelfrüh"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HallertauPerle"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Magnum"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#NorthernBrewer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Saaz"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SpaltSelect"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#StyrianGoldings"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Target"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#Tettnanger"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#CraftBrewery"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#IndustrialBrewery"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#TrappistBrewery"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#DryStout"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#ImperalStout"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#SweetStout"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#HighCost"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#LowCost"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/valentin/ontologies/2018/9/beer-ontology#MediumCost"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+
